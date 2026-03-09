@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+<title>Wheel</title>
+<style>
+body{
+margin: 0;
+}
+
+.New{
+height: 100vh;
+background-image: url("https://wallpaperaccess.com/full/9016858.jpg");
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+h1{
+font-size: 70px;
+text-shadow:2px 2px 10px black;
+animation: fadeIn 3s ease;
+}
+p{
+font-size: 20px;
+text-shadow:2px 2px 10px black;
+
+opacity: 0;
+
+animation: fadeInn 1.8s ease;
+animation-delay: 2s;
+animation-fill-mode: forwards;
+}
+
+.ninja{
+position:absolute;
+top:20px;
+left:20px;
+
+width: 102px;
+height: 89px;
+
+background-image: url("ChatGPT_Image_Mar_9__2026__01_11_08_AM-removebg-preview.png");
+background-repeat: no-repeat;
+
+cursor:pointer;
+}
+.slash{
+animation: slash 0.8s steps(6);
+}
+.menu{
+position:absolute;
+top:40px;
+left:160px;
+
+display:flex;
+gap:15px;
+}
+
+.menu{
+position:absolute;
+top:40px;
+left:170px;
+
+display:flex;
+gap:45px;   /* more spacing */
+}
+
+.menu-btn{
+transition:all 0.4s ease;
+opacity:0;
+transform:translateX(-20px);
+
+padding:12px 26px;
+
+font-size:16px;
+letter-spacing:1px;
+
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.4);
+
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(8px);
+
+color:white;
+
+cursor:pointer;
+
+transition:all 0.35s ease;
+}
+
+
+.menu-btn:hover{
+
+background:rgba(255,255,255,0.25);
+
+transform:translateY(-3px);
+
+box-shadow:0 6px 20px rgba(255,255,255,0.3);
+
+}
+
+.menu-btn.show{
+opacity:1;
+transform:translateX(0);
+}
+
+
+@keyframes slash{
+from{
+background-position: 0px 0px;
+}
+to{
+background-position:-612px 0px;
+}
+}
+
+@keyframes fadeInn{
+from{
+opacity: 0;
+transform: translateY(-10px);
+}
+to{
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeIn{
+from{
+opacity: 0;
+transform: translateY(-30px);
+}
+to{
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+<div class="New">
+
+<div class="ninja" id="ninja"></div>
+<div class="menu">
+    <button class="menu-btn">Get Started</button>
+    <button class="menu-btn">Explore Worlds</button>
+    <button class="menu-btn">Learn More</button>
+    <button class="menu-btn">Contact Us</button>
+</div>
+<h1 style="color: white">Dream Worlds</h1>
+<p style="color: white">Enter the realm beyond imagination</p>
+
+</div>
+<script>
+
+const ninja = document.getElementById("ninja");
+const buttons = document.querySelectorAll(".menu-btn");
+
+let open = false;
+
+ninja.addEventListener("click", () => {
+
+ninja.classList.remove("slash");
+void ninja.offsetWidth;
+ninja.classList.add("slash");
+
+if(!open){
+
+buttons.forEach((btn,index)=>{
+setTimeout(()=>{
+btn.classList.add("show");
+}, index*200);
+});
+
+open = true;
+
+}else{
+
+buttons.forEach((btn,index)=>{
+setTimeout(()=>{
+btn.classList.remove("show");
+}, index*200);
+});
+
+open = false;
+
+}
+
+});
+</script>
+</body>
+
+
+</html>
