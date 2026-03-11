@@ -155,10 +155,32 @@ background:rgba(255,255,255,0.2);
 opacity:1;
 transform:translateY(0);
 }
-    .signup-box h2{
-color:white;
+    .signup-box{
+
+background:linear-gradient(145deg, rgba(25,25,45,0.95), rgba(10,10,20,0.95));
+
+padding:40px;
+border-radius:18px;
+
+display:flex;
+flex-direction:column;
+gap:14px;
+
+width:360px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.7),
+0 0 25px rgba(120,100,255,0.3);
+
+border:1px solid rgba(255,255,255,0.15);
+
+animation:popup 0.35s ease;
+}
+    .signup-box p{
+color:#e5e5ff;
+line-height:1.6;
 text-align:center;
-margin-bottom:10px;
+font-size:16px;
 }
     .signup-panel{
 
@@ -389,10 +411,13 @@ transform: translateY(0);
 
 <div class="signup-box">
 
-<h2>Tutorial</h2>
+<h2>Entering Dream Worlds</h2>
 
-<p>Welcome to Dream Worlds.</p>
-<p>Explore fantasy worlds and immersive simulations.</p>
+<p>⚔ Click the ninja to reveal the world menu.</p>
+
+<p>Explore different realms like Fantasy, Sci-Fi, and Adventure.</p>
+
+<p>Create an account to begin your journey.</p>
 
 <button class="close-btn" id="closeTutorial">Close</button>
 
@@ -502,6 +527,7 @@ menu.classList.remove("dim");
 
 
 </html>
+
 
 
 
