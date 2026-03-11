@@ -312,8 +312,8 @@ transform: translateY(0);
 <button class="menu-btn">Get Started</button>
 <div class="dropdown-content">
 <a href="#" id="openSignup">Create Account</a>
-<a href="#">Login</a>
-<a href="#">Tutorial</a>
+<a href="#" id="openLogin">Login</a>
+<a href="#" id="openTutorial">Tutorial</a>
 </div>
 </div>
 
@@ -364,7 +364,35 @@ transform: translateY(0);
 <button class="close-btn" id="closePanel">Close</button>
 
 </div>
+<div class="signup-panel" id="loginPanel">
 
+<div class="signup-box">
+
+<h2>Login</h2>
+
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<button>Enter World</button>
+<button class="close-btn" id="closeLogin">Close</button>
+
+</div>
+
+</div>
+        <div class="signup-panel" id="tutorialPanel">
+
+<div class="signup-box">
+
+<h2>Tutorial</h2>
+
+<p>Welcome to Dream Worlds.</p>
+<p>Explore fantasy worlds and immersive simulations.</p>
+
+<button class="close-btn" id="closeTutorial">Close</button>
+
+</div>
+
+</div>
 </div>
          
 <script>
@@ -433,12 +461,42 @@ closePanel.addEventListener("click",()=>{
 signupPanel.classList.remove("show");
 menu.classList.remove("dim");
 });
+    const openLogin = document.getElementById("openLogin");
+const loginPanel = document.getElementById("loginPanel");
+const closeLogin = document.getElementById("closeLogin");
+
+const openTutorial = document.getElementById("openTutorial");
+const tutorialPanel = document.getElementById("tutorialPanel");
+const closeTutorial = document.getElementById("closeTutorial");
+
+openLogin.addEventListener("click",(e)=>{
+e.preventDefault();
+loginPanel.classList.add("show");
+menu.classList.add("dim");
+});
+
+closeLogin.addEventListener("click",()=>{
+loginPanel.classList.remove("show");
+menu.classList.remove("dim");
+});
+
+openTutorial.addEventListener("click",(e)=>{
+e.preventDefault();
+tutorialPanel.classList.add("show");
+menu.classList.add("dim");
+});
+
+closeTutorial.addEventListener("click",()=>{
+tutorialPanel.classList.remove("show");
+menu.classList.remove("dim");
+});
 </script>
 </body>
 
 
 
 </html>
+
 
 
 
