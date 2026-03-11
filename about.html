@@ -1,27 +1,18 @@
-<div class="page-transition"></div>
-const links = document.querySelectorAll("a");
+body{
 
-const transition = document.querySelector(".page-transition");
+opacity:0;
+transform:translateX(40px);
 
-links.forEach(link=>{
+transition:opacity 0.6s ease, transform 0.6s ease;
 
-link.addEventListener("click",function(e){
+}
 
-const target = this.href;
+body.loaded{
 
-if(target.includes("#")) return;
+opacity:1;
+transform:translateX(0);
 
-e.preventDefault();
-
-transition.classList.add("active");
-
-setTimeout(()=>{
-window.location = target;
-},800);
-
-});
-
-});
-window.onload = () =>{
-document.querySelector(".page-transition").classList.remove("active");
+}
+window.onload = ()=>{
+document.body.classList.add("loaded");
 }
