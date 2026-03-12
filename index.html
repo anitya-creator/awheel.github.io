@@ -433,24 +433,7 @@ color:#bfbfe6;
     .tutorial-box button{
 margin-top:25px;
 }
-.page-transition{
 
-position:fixed;
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:black;
-
-transform:translateX(100%);
-
-z-index:9999;
-
-transition:transform 0.8s ease;
-
-}
 
 .page-transition.active{
 transform:translateX(0);
@@ -544,7 +527,8 @@ background:#050510;
 display:flex;
 gap:40px;
 margin-top:60px;
-
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .world-card{
@@ -565,6 +549,13 @@ transition:0.4s;
 
 transform:translateY(-8px);
 background:rgba(255,255,255,0.1);
+
+}
+    section h2{
+
+font-size:42px;
+margin-bottom:30px;
+text-align:center;
 
 }
 
@@ -589,7 +580,7 @@ background:rgba(255,255,255,0.1);
 </div>
 
 <div class="dropdown">
-<button class="menu-btn">Explore Worlds</button>
+<a href="#explore" class="menu-btn">Explore Worlds</a>
 <div class="dropdown-content">
 <a href="#">Adventure</a>
 <a href="#">Fantasy</a>
@@ -601,7 +592,7 @@ background:rgba(255,255,255,0.1);
 <div class="dropdown">
 <button class="menu-btn">Learn More</button>
 <div class="dropdown-content">
-<a href="about.html">About Us</a>
+<a href="#about">About Us</a>
 <a href="#">How It Works</a>
 <a href="#">Technology</a>
 </div>
@@ -858,6 +849,7 @@ observer.observe(section);
 
 
 </html>
+
 
 
 
