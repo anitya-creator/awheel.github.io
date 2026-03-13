@@ -440,6 +440,73 @@ margin-top:25px;
 .page-transition.active{
 transform:translateX(0);
 }
+    .world-card:nth-child(1){
+background-image:url("https://wallpaperaccess.com/full/317501.jpg");
+}
+
+.world-card:nth-child(2){
+background-image:url("https://wallpaperaccess.com/full/1616106.jpg");
+}
+
+.world-card:nth-child(3){
+background-image:url("https://wallpaperaccess.com/full/21593.jpg");
+}
+    .world-card{
+
+position:relative;
+
+background-size:cover;
+background-position:center;
+
+padding:40px 25px;
+
+border-radius:14px;
+
+width:260px;
+height:220px;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+color:white;
+
+overflow:hidden;
+
+transition:0.5s;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+
+}
+    .world-card::before{
+
+content:"";
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+
+}
+    .world-card:hover{
+
+transform:translateY(-12px) scale(1.04);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.8),
+0 0 25px rgba(100,100,255,0.7);
+
+}
+    .world-card h3,
+.world-card p,
+.world-card button{
+position:relative;
+z-index:2;
+}
 @keyframes float{
 
 0%{transform:translateY(0);}
@@ -582,7 +649,7 @@ text-align:center;
 </div>
 
 <div class="dropdown">
-<a href="#explore" class="menu-btn">Explore Worlds</a>
+<button class="menu-btn" onclick="location.href='#explore'">Explore Worlds</button>
 <div class="dropdown-content">
 <a href="#">Adventure</a>
 <a href="#">Fantasy</a>
@@ -682,21 +749,29 @@ text-align:center;
 
 <h2>Explore Worlds</h2>
 
+<p style="text-align:center;max-width:700px;margin:auto;">
+Choose a universe to enter. Each world offers a different
+experience designed to expand imagination beyond reality.
+</p>
+
 <div class="worlds">
 
 <div class="world-card">
 <h3>Adventure</h3>
-<p>Climb mountains and explore unknown lands.</p>
+<p>Climb mountains, explore ruins and discover lost civilizations.</p>
+<button>Enter World</button>
 </div>
 
 <div class="world-card">
 <h3>Fantasy</h3>
-<p>Enter magical kingdoms full of dragons and myths.</p>
+<p>Step into magical kingdoms filled with dragons and ancient powers.</p>
+<button>Enter World</button>
 </div>
 
 <div class="world-card">
 <h3>Sci-Fi</h3>
-<p>Travel through galaxies and futuristic civilizations.</p>
+<p>Travel across galaxies and explore futuristic alien worlds.</p>
+<button>Enter World</button>
 </div>
 
 </div>
@@ -720,10 +795,11 @@ and simulation merge into powerful experiences.
 
 <h2>Contact</h2>
 
-<p>Email : hello@awheel.com</p>
-<p>Discord : AWheel Community</p>
+<p>Email : <a href="info@awheel.com">info@awheel.com</a></p>
 
-</section>         
+<p>Discord : <a href="#">Join Community</a></p>
+
+</section>    
 <script>
 
 const ninja = document.getElementById("ninja");
