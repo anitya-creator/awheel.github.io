@@ -694,6 +694,121 @@ margin-bottom:30px;
 text-align:center;
 
 }
+    .world-panels{
+
+margin-top:80px;
+
+display:flex;
+flex-direction:column;
+gap:60px;
+
+}
+
+.world-panel{
+
+height:420px;
+
+border-radius:20px;
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+
+padding-left:80px;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:0 25px 70px rgba(0,0,0,0.8);
+
+transition:0.5s;
+
+}
+
+.world-panel::before{
+
+content:"";
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+rgba(0,0,0,0.8),
+rgba(0,0,0,0.2)
+);
+
+}
+
+.panel-content{
+
+position:relative;
+z-index:2;
+
+max-width:420px;
+
+}
+
+.panel-content h3{
+
+font-size:40px;
+margin-bottom:15px;
+
+}
+
+.panel-content p{
+
+font-size:18px;
+margin-bottom:20px;
+
+}
+
+.panel-content button{
+
+padding:14px 34px;
+
+border:none;
+border-radius:40px;
+
+background:linear-gradient(135deg,#6a5cff,#4c3cff);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+.world-panel:hover{
+
+transform:scale(1.02);
+
+box-shadow:
+0 30px 90px rgba(0,0,0,0.9),
+0 0 40px rgba(120,120,255,0.6);
+
+}
+
+.adventure{
+background-image:url("https://wallpaperaccess.com/full/317501.jpg");
+}
+
+.fantasy{
+background-image:url("https://wallpaperaccess.com/full/1616106.jpg");
+}
+
+.scifi{
+background-image:url("https://wallpaperaccess.com/full/21593.jpg");
+}
+
 
 </style>
 </head>
@@ -821,26 +936,34 @@ Choose a universe to enter. Each world offers a different
 experience designed to expand imagination beyond reality.
 </p>
 
-<div class="worlds">
+<div class="world-panels">
 
-<div class="world-card">
-<h3>Adventure</h3>
-<p>Climb mountains, explore ruins and discover lost civilizations.</p>
+<div class="world-panel adventure">
+<div class="panel-content">
+<h3>Adventure World</h3>
+<p>Climb mountains, explore ruins and uncover lost civilizations.</p>
 <button>Enter World</button>
 </div>
-
-<div class="world-card">
-<h3>Fantasy</h3>
-<p>Step into magical kingdoms filled with dragons and ancient powers.</p>
-<button>Enter World</button>
 </div>
 
-<div class="world-card">
-<h3>Sci-Fi</h3>
-<p>Travel across galaxies and explore futuristic alien worlds.</p>
+<div class="world-panel fantasy">
+<div class="panel-content">
+<h3>Fantasy World</h3>
+<p>Dragons, magic kingdoms and ancient powers await you.</p>
 <button>Enter World</button>
 </div>
-    </div>
+</div>
+
+<div class="world-panel scifi">
+<div class="panel-content">
+<h3>Sci-Fi World</h3>
+<p>Travel galaxies and discover futuristic alien worlds.</p>
+<button>Enter World</button>
+</div>
+</div>
+
+</div>
+
     <div class="world-features">
 
 <div>
