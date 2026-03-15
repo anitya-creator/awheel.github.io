@@ -578,13 +578,21 @@ max-width:300px;
 }
    .join{
 
-background:#090915;
+position:relative;
+
+padding:140px 20px;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-padding:120px 20px;
+overflow:hidden;
+
+background:linear-gradient(
+to bottom,
+#050510,
+#090920
+);
 
 }
 
@@ -674,7 +682,7 @@ transform: translateY(0);
 
 min-height:auto;
 
-padding:140px 80px;
+padding:120px 80px;
 
 color:white;
 
@@ -692,15 +700,20 @@ transform:translateY(0);
 }
 
 .explore{
-background:#050510;
+background:
+linear-gradient(
+to bottom,
+#050510 0%,
+#080820 60%,
+#0b0b25 100%
+);
 }
 
 .about{
-background:radial-gradient(
-circle at center,
-#0b0b25,
-#050510
-);
+
+background:
+radial-gradient(circle at center,#0d0d30 0%,#070718 70%,#050510 100%);
+
 }
 
 .contact{
@@ -906,19 +919,23 @@ align-items:center;
 
 .join-panel{
 
-padding:80px;
+padding:70px;
 
-border-radius:25px;
+border-radius:28px;
 
 background:linear-gradient(145deg,#0a0a25,#02020a);
 
 box-shadow:
-0 30px 80px rgba(0,0,0,0.9),
-0 0 40px rgba(120,120,255,0.4);
+0 40px 100px rgba(0,0,0,0.9),
+0 0 50px rgba(120,120,255,0.5);
 
 text-align:center;
 
 max-width:700px;
+
+backdrop-filter:blur(6px);
+
+border:1px solid rgba(255,255,255,0.08);
 
 }
     .contact-grid{
@@ -1098,9 +1115,12 @@ background-image:url("https://img.freepik.com/premium-photo/enchanted-3d-fantasy
 }
     .about{
 
-background:
-radial-gradient(circle at center,#0d0d30,#050510);
-
+background:radial-gradient(
+circle at center,
+#0d0d30 0%,
+#070718 70%,
+#050510 100%
+);  
 position:relative;
 overflow:hidden;
 
@@ -1224,6 +1244,52 @@ animation:float 4s infinite ease-in-out;
 0%{transform:translate(-50%,-50%) scale(1);}
 50%{transform:translate(-50%,-50%) scale(1.2);}
 100%{transform:translate(-50%,-50%) scale(1);}
+
+}
+    .join::before,
+.join::after{
+
+content:"";
+
+position:absolute;
+
+width:350px;
+height:350px;
+
+border-radius:50%;
+
+filter:blur(90px);
+
+opacity:0.35;
+
+animation:floatGlow 10s infinite alternate;
+
+}
+
+.join::before{
+
+background:#6a5cff;
+
+left:10%;
+top:20%;
+
+}
+
+.join::after{
+
+background:#8a7dff;
+
+right:10%;
+bottom:10%;
+
+animation-delay:3s;
+
+}
+
+@keyframes floatGlow{
+
+0%{transform:translateY(0px) scale(1);}
+100%{transform:translateY(-40px) scale(1.15);}
 
 }
 </style>
@@ -1402,7 +1468,6 @@ experience designed to expand imagination beyond reality.
 
 </section>
 
-<div class="section-divider"></div>
 <section class="about" id="about">
 
 <h2>The Origin of AWheel</h2>
