@@ -798,8 +798,124 @@ background-image:url("https://img.freepik.com/premium-photo/enchanted-3d-fantasy
 .scifi{
 background-image:url("https://wallpaperaccess.com/full/21593.jpg");
 }
+.section-divider{
+height:120px;
+background:linear-gradient(to bottom, transparent, #080820);
+}
+.about-banner{
 
+margin:60px auto;
 
+max-width:900px;
+
+padding:60px;
+
+text-align:center;
+
+background:linear-gradient(135deg,#10102a,#060612);
+
+border-radius:20px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.8),
+0 0 40px rgba(100,100,255,0.3);
+
+}
+    .timeline{
+
+margin-top:80px;
+
+display:flex;
+justify-content:center;
+gap:60px;
+
+flex-wrap:wrap;
+
+}
+
+.timeline-item{
+
+background:rgba(255,255,255,0.05);
+
+padding:30px;
+
+border-radius:16px;
+
+max-width:250px;
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+.timeline-item:hover{
+
+transform:translateY(-10px);
+
+background:rgba(120,120,255,0.15);
+
+}
+    .join{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.join-panel{
+
+padding:80px;
+
+border-radius:25px;
+
+background:linear-gradient(145deg,#0a0a25,#02020a);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,0.9),
+0 0 40px rgba(120,120,255,0.4);
+
+text-align:center;
+
+max-width:700px;
+
+}
+    .contact-grid{
+
+margin-top:60px;
+
+display:flex;
+justify-content:center;
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+
+.contact-card{
+
+background:rgba(255,255,255,0.05);
+
+padding:40px;
+
+border-radius:18px;
+
+width:220px;
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-8px);
+
+background:rgba(120,120,255,0.15);
+
+}
 </style>
 </head>
 
@@ -976,10 +1092,15 @@ experience designed to expand imagination beyond reality.
 
 </section>
 
-
+<div class="section-divider"></div>
 <section class="about" id="about">
 
 <h2>About AWheel</h2>
+    
+    <div class="about-banner">
+<h3>The Gateway to Infinite Worlds</h3>
+<p>AWheel blends imagination, storytelling and technology to create immersive realities where exploration never ends.</p>
+</div>
 
 <p class="about-text">
 AWheel is a gateway to immersive worlds where imagination,
@@ -1014,31 +1135,62 @@ can build, share and experience entirely new universes.
 </div>
 
 </div>
+    <div class="timeline">
+
+<div class="timeline-item">
+<h4>Explore</h4>
+<p>Discover unique worlds designed with immersive storytelling.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Experience</h4>
+<p>Interact with environments and narratives that react to your actions.</p>
+</div>
+
+<div class="timeline-item">
+<h4>Create</h4>
+<p>Build your own worlds and share them with other explorers.</p>
+</div>
+
+</div>
 
 </section>
     
 <section class="join">
 
+<div class="join-panel">
+
 <h2>Begin Your Journey</h2>
 
 <p>
-Step beyond the limits of ordinary reality and experience
-worlds that challenge imagination.
+Step beyond the limits of ordinary reality and explore worlds
+where imagination becomes experience.
 </p>
 
 <button class="join-btn">Enter AWheel</button>
 
+</div>
+
 </section>
 
-<section class="contact" id="contact">
+<<div class="contact-grid">
 
-<h2>Contact</h2>
+<div class="contact-card">
+<h3>Email</h3>
+<p><a href="mailto:info@awheel.com">info@awheel.com</a></p>
+</div>
 
-<p>Email : <a href="mailto:info@awheel.com">info@awheel.com</a></p>
+<div class="contact-card">
+<h3>Discord</h3>
+<p><a href="#">Join Community</a></p>
+</div>
 
-<p>Discord : <a href="#">Join Community</a></p>
+<div class="contact-card">
+<h3>Support</h3>
+<p>Help Center Coming Soon</p>
+</div>
 
-</section>    
+</div>
 <script>
 
 const ninja = document.getElementById("ninja");
