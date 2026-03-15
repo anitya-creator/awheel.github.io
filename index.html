@@ -4,7 +4,7 @@
 
 
 <head>
-<title>Wheel</title>
+<title>AWheel</title>
 <style>
     html{
 scroll-behavior:smooth;
@@ -440,18 +440,7 @@ margin-top:25px;
 .page-transition.active{
 transform:translateX(0);
 }
-    .world-card:nth-child(1){
-background-image:url("https://https://images6.alphacoders.com/136/1365699.jpeg
-");
-}
-
-.world-card:nth-child(2){
-background-image:url("https://img.freepik.com/premium-photo/enchanted-3d-fantasy-forest-with-magical-creatures-glowing-plants_1277187-9842.jpg");
-}
-
-.world-card:nth-child(3){
-background-image:url("https://wallpaperaccess.com/full/21593.jpg");
-}
+    
     .world-card{
 
 position:relative;
@@ -799,11 +788,11 @@ box-shadow:
 }
 
 .adventure{
-background-image:url("https://wallpaperaccess.com/full/317501.jpg");
+background-image:url("https://images6.alphacoders.com/136/1365699.jpeg");
 }
 
 .fantasy{
-background-image:url("https://wallpaperaccess.com/full/1616106.jpg");
+background-image:url("https://img.freepik.com/premium-photo/enchanted-3d-fantasy-forest-with-magical-creatures-glowing-plants_1277187-9842.jpg");
 }
 
 .scifi{
@@ -984,7 +973,6 @@ experience designed to expand imagination beyond reality.
 
 </div>
 
-</div>
 
 </section>
 
@@ -1046,7 +1034,7 @@ worlds that challenge imagination.
 
 <h2>Contact</h2>
 
-<p>Email : <a href="info@awheel.com">info@awheel.com</a></p>
+<p>Email : <a href="mailto:info@awheel.com">info@awheel.com</a></p>
 
 <p>Discord : <a href="#">Join Community</a></p>
 
@@ -1171,26 +1159,7 @@ entry.target.classList.add("show");
 sections.forEach(section=>{
 observer.observe(section);
 });
-    const cards = document.querySelectorAll(".world-card");
-
-cards.forEach(card => {
-
-card.addEventListener("mousemove",(e)=>{
-
-const rect = card.getBoundingClientRect();
-
-const x = e.clientX - rect.left;
-const y = e.clientY - rect.top;
-
-const centerX = rect.width/2;
-const centerY = rect.height/2;
-
-const rotateX = (y-centerY)/10;
-const rotateY = (centerX-x)/10;
-
-card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-
-});
+   
 
 card.addEventListener("mouseleave",()=>{
 card.style.transform="rotateX(0) rotateY(0)";
